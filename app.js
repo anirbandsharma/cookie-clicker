@@ -5,6 +5,8 @@ var highscore = document.getElementById("highscore");
 var save = document.getElementById("save");
 var reset = document.getElementById("reset");
 
+highscore.innerText = localStorage.getItem(highscore);
+
 cookie.onmouseover = function () {
   container.style.backgroundColor = "rgb(168, 137, 96)";
   setTimeout(function(){container.style.backgroundColor = "white";},3000);
@@ -35,10 +37,13 @@ document.onblur = function(){
 }
 
 save.onclick = function(){
-    highscore.innerText = currentScore;
+  localStorage.setItem(highscore, currentScore);
+    highscore.innerText = localStorage.getItem(highscore);
 }
 
 reset.onclick = function(){
+    localStorage.clear();
+    highscore.innerText = 0;
     currentScore = 0;
     score.innerText = 0;
 }
