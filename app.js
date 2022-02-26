@@ -6,7 +6,7 @@ var save = document.getElementById("save");
 var reset = document.getElementById("reset");
 
 cookie.onmouseover = function () {
-  container.style.backgroundColor = "rgb(161, 211, 176)";
+  container.style.backgroundColor = "rgb(168, 137, 96))";
   setTimeout(function(){container.style.backgroundColor = "white";},3000);
   cookie.style.transform = "scale(1.2)";
   cookie.style.cursor = "pointer";
