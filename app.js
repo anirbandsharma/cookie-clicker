@@ -39,5 +39,6 @@ save.onclick = function(){
 }
 
 reset.onclick = function(){
+    currentScore = 0;
     score.innerText = 0;
 }
